@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +11,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/app_name">
+        android:hint="@string/name"
+        app:endIconDrawable="@drawable/ic_baseline_close_24"
+        app:endIconMode="clear_text">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_1"
@@ -20,33 +23,44 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/app_name">
+        android:hint="@string/age"
+        app:endIconDrawable="@drawable/ic_baseline_close_24"
+        app:endIconMode="clear_text"
+        app:helperText="Age max 50">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_2"
+            android:maxLength="3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/app_name">
+        android:hint="@string/app_name"
+        app:endIconMode="password_toggle">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/app_name">
+        android:hint="@string/app_name"
+        app:endIconDrawable="@drawable/ic_baseline_close_24"
+        app:endIconMode="clear_text">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_4"
@@ -58,7 +72,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/app_name">
+        android:hint="@string/app_name"
+        app:endIconDrawable="@drawable/ic_baseline_close_24"
+        app:endIconMode="clear_text">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/et_5"

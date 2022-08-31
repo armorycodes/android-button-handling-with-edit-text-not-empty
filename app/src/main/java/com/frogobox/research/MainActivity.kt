@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
     private val textWatcher = object : TextWatcher {
         override fun afterTextChanged(s: Editable?) {
             binding.button.isEnabled = validateButton()
+            if (binding.et2.text.toString().isNotEmpty() && binding.et2.text.toString().toInt() > 50) {
+                binding.et2.error = "Max 50"
+            }
         }
 
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -42,6 +45,9 @@ class MainActivity : AppCompatActivity() {
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             binding.button.isEnabled = validateButton()
+            if (binding.et2.text.toString().isNotEmpty() && binding.et2.text.toString().toInt() > 50) {
+                binding.et2.error = "Max 50"
+            }
         }
     }
 
@@ -51,7 +57,8 @@ class MainActivity : AppCompatActivity() {
                     et2.validateText() &&
                     et3.validateText() &&
                     et4.validateText() &&
-                    et5.validateText()
+                    et5.validateText() &&
+                    binding.et2.text.toString().toInt() < 50
         }
     }
 
