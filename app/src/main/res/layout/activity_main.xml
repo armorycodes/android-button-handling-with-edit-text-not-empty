@@ -72,11 +72,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/app_name"
+        android:hint="Number"
         app:endIconDrawable="@drawable/ic_baseline_close_24"
         app:endIconMode="clear_text">
 
         <androidx.appcompat.widget.AppCompatEditText
+            android:inputType="number"
             android:id="@+id/et_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
